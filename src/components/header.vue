@@ -72,9 +72,12 @@ export default {
 
     @import "../assets/scss/partials/_variables.scss";
 
+    .logo-container {
+        padding: 0.5em;
+    }
     .d-flex {
         align-items: center;
-        justify-content: space-around;
+        justify-content: space-between;
     }
     ul {
         list-style: none;
