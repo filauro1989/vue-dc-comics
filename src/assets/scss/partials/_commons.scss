@@ -1,0 +1,28 @@
+//reset
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 100%;
+  font-family: $fontFamily;
+  font-weight: bold;
+}
+
+h1 {
+  font-size: 4em;
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+}
+.d-flex {
+  display: flex;
+}
+
+.text-center {
+  text-align: center;
+}
