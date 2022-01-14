@@ -169,9 +169,9 @@ export default {
         justify-content: space-around;
     }
     .top {
-        background-color: black;
         flex-direction: column;
         align-items: center;
+        background-color: $cardsBg;
         .jumbotron {
             height: 400px;
             width: 100%;
@@ -199,7 +199,8 @@ export default {
             padding: 2em;
                 p {       
                     font-size: 1.3em;
-                }
+                };
+        
         }
     }
     .bottom {
