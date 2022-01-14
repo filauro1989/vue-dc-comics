@@ -2,7 +2,7 @@
     <footer>
         <div class="container">
             <div class="dc-container d-flex">
-                <div class="footer-col-left d-flex j-center al-center">
+                <div class="footer-col-left d-flex j-center">
                     <div class="col">
                         <h3>dc comics</h3>
                         <ul>
@@ -55,7 +55,7 @@
 
 <script>
 export default {
-    name: 'Main',
+    name: 'Footer',
     data() { //data e' una funzione che restituisce il nostro object
         return {
             
@@ -72,11 +72,18 @@ export default {
 
     footer {
         background-image: url(../assets/img/footer-bg.jpg);
-        padding: 2em 0;
+        .container {
+            background-image: url(../assets/img/dc-logo-bg.png);
+            background-repeat: no-repeat;
+            background-size: 35%;
+            background-position-x: 80%;
+            background-position-y: 50%;
+        }
     }
     .footer-col-left {
         width: 40%;
         .col {
+            padding: 2em 0;
             width: calc(100% / 3);
             h3 {
                 color: white;
