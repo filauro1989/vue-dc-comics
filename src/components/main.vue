@@ -161,7 +161,9 @@ export default {
         background-color: black;
         .container {
             display: flex;
+            justify-content: center;
             flex-wrap: wrap;
+            padding: 1em;
                 p {       
                     font-size: 1.3em;
                 }

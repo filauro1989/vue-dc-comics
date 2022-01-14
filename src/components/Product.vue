@@ -1,13 +1,14 @@
 <template>
     <div class="card">
-        <div class="product">
-            <img
-                :src="img" 
-                :alt="alt"
-                
-            >
+        <div class="wrapper">
+            <div class="product">
+                <img
+                    :src="img" 
+                    :alt="alt"
+                >
+            </div>
+            <h2>{{ titolo }}</h2>
         </div>
-        <h2>{{ titolo }}</h2>
     </div>
 </template>
 
@@ -27,10 +28,16 @@ export default {
     .card {
         display: flex;
         flex-wrap: wrap;
+        justify-content: center;
         flex-basis: calc((100% / 6) - 0.4em);
+        .wrapper {
+            display: flex;
+            flex-direction: column;
+        };
         h2 {
-            font-size: 0.8em;
+            font-size: 0.5em;
             text-transform: uppercase;
+            width: 150px;
         };
         .product {
             margin: 0.2em;
