@@ -16,11 +16,6 @@
 export default {
     name:"Product",
     props: ['img', 'alt', 'titolo', 'tipo', 'prezzo'],
-    data() {
-        return {
-
-        }
-    }
 }
 </script>
 

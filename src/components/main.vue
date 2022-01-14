@@ -1,6 +1,9 @@
 <template>
     <main>
         <div class="top d-flex">
+            <div class="jumbotron">
+
+            </div>
             <div class="container">
                 <Product v-for="(card, index) in cards" :key="index" :img="card.thumb" :alt="card.series" :titolo="card.series" />
             </div>
@@ -159,6 +162,14 @@ export default {
     }
     .top {
         background-color: black;
+        flex-direction: column;
+        .jumbotron {
+            height: 400px;
+            width: 100%;
+            background-image: url(../assets/img/jumbotron.jpg);
+            background-repeat: no-repeat;
+            background-size: 100%;
+        };
         .container {
             display: flex;
             justify-content: center;
