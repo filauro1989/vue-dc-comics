@@ -2,10 +2,17 @@
     <main>
         <div class="top d-flex">
             <div class="jumbotron">
-
+                <div class="current-series">
+                    <p>current series</p>
+                </div>
             </div>
             <div class="container">
                 <Product v-for="(card, index) in cards" :key="index" :img="card.thumb" :alt="card.series" :titolo="card.series" />
+            </div>
+            <div class="load-wrap">
+                <div class="load-more">
+                    <p>load more</p>
+                </div>
             </div>
         </div>
         <div class="bottom d-flex">
@@ -53,6 +60,7 @@
                 
             </div>
         </div>
+
     </main>
 </template>
 
@@ -163,18 +171,32 @@ export default {
     .top {
         background-color: black;
         flex-direction: column;
+        align-items: center;
         .jumbotron {
             height: 400px;
             width: 100%;
             background-image: url(../assets/img/jumbotron.jpg);
             background-repeat: no-repeat;
             background-size: 100%;
+            position: relative;
+            .current-series {
+                position: absolute;
+                bottom: -15px;
+                left: 15%;
+                background-color: $fontColor;
+                padding: 0.5em 1em;
+                p {
+                    text-transform: uppercase;
+                    color: white
+                }
+            }
+
         };
         .container {
             display: flex;
             justify-content: center;
             flex-wrap: wrap;
-            padding: 1em;
+            padding: 2em;
                 p {       
                     font-size: 1.3em;
                 }
@@ -191,6 +213,22 @@ export default {
             font-size: 0.8em;
             padding: 0 1em;
             text-transform: uppercase;
+        }
+    }
+    .load-wrap {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        padding-bottom: 1em;
+        .load-more {
+            margin: 0 auto;
+            padding: 0.5em 2.5em;
+            background-color: $fontColor;
+            p {
+                font-size: 0.8em;
+                color: white;
+                text-transform: uppercase;
+            }
         }
     }
 
